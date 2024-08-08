@@ -1,3 +1,106 @@
-body {
-    margin: 0;
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* reset */ 
+
+* { 
+    padding: 0; 
+    margin: 0; 
+    box-sizing: border-box;
+}
+
+:root { 
+    /* colors */
+    --GREEN-COLOR: #34D399;
+    --WHITE-COLOR: #D5D4D8;
+    --BG-COLOR: #1F2937; 
+
+    /* font */ 
+    --FF: "Karla", sans-serif;
+    --FS: 32px; 
+    --FS-SMALL: 20px;
+    --TITLE-FW: 800;
+    --TITLE-LH: 40px;
+
+    /* borders, paddings & margins */ 
+    --BORDER-RADIUS: 6px;
+    --MARGIN: 0.5em 0 0 0;
+    --PADDING: 3rem 0;
+}
+
+/* general styles */ 
+body { 
+    font-family: var(--FF);
+    display: flex;
+    justify-content: center;
+}
+
+.container { 
+    display: grid;
+    grid-template-rows: auto repeat(3, auto) 1fr;
+    grid-row-gap: 10px;
+    place-items: center;
+    background-color: var(--BG-COLOR);
+    height: 770px;
+    width: 770px;
+    border-radius: calc(var(--BORDER-RADIUS) * 3);
+    margin: auto auto;
+    padding: var(--PADDING);
+
+}
+
+h1 { 
+    color: var(--GREEN-COLOR); 
+    font-weight: var(--TITLE-FW);  
+    font-size: calc(var(--FS) * 2);
+}
+
+#white { 
+    color: var(--WHITE-COLOR);
+    font-weight: var(--TITLE-FW);
+    line-height: var(--TITLE-LH);
+}
+
+#leading { 
+    color: var(--WHITE-COLOR);
+    line-height: 26px;
+    font-size: var(--FS);
+    margin: var(--MARGIN);
+}
+
+.button { 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 3.5em 0;
+    border-bottom: 1px solid #6c819e;
+    padding: var(--PADDING)
+
+}
+
+#generate { 
+    border: 0;
+    height: 51px;
+    width: 282.5px;
+    background-color: var(--GREEN-COLOR);
+    color: white;
+    font-weight: 500;
+    font-size: var(--FS-SMALL);
+    font-family: inherit;
+}
+
+.password { 
+    display: grid;
+    place-items: center;
+    grid-template-columns: 1fr 1fr;
+}
+
+.password button { 
+    width: 272.5px;
+    margin: 0 10px 0;
+    height: 50px;
+    background-color: #273549;
+    border: 0;
+    color: var(--GREEN-COLOR);
+    font-size: 16px;
+    font-weight: 500;
 }
